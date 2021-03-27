@@ -30,4 +30,38 @@ public class HotelReservation
     }
 
 
+
+
+    public boolean findCheapestHotel(String date11,String date22)
+    {
+        try
+        {
+            DateFormat format =new SimpleDateFormat("dd mm yyyy");
+            Date date1 = format.parse(date11);
+            Date date2 = format.parse(date22);
+            long daysBetween= ChronoUnit.DAYS.between(date1,date2);
+            getTotalRateForDays(daysBetween);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+    void getTotalRateForDays(long DaysBetween)
+    {
+        try
+        {
+            for(int i = 0; i < hotelList.size(); i++)
+            {
+                long totalAmountForstayingDates = DaysBetween * hotelList.get(i).rates;
+                System.out.println(hotelList.get(i).hotelName + "==> " + totalAmountForstayingDates );
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            System.out.println("Error");
+        }
+    }
+
 }

@@ -13,5 +13,11 @@ HotelReservation hotelReservation = new HotelReservation();
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void checkedCheapestHotelBetweenTwoDates()
+    {
+        boolean result = hotelReservation.findCheapestHotel("10/09/2020","11/09/2020");
+        Assertions.assertTrue(result);
+    }
 
 }
