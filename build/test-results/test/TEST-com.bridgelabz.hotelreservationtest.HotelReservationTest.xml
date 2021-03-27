@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.hotelreservationtest.HotelReservationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-27T04:28:05" hostname="DESKTOP-0QBG6NF" time="0.046">
+  <properties/>
+  <testcase name="checkedGivenHotelNameandRateAreAdded_True()" classname="com.bridgelabz.hotelreservationtest.HotelReservationTest" time="0.046"/>
+  <system-out><![CDATA[false
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

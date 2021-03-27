@@ -1,30 +1,30 @@
 package com.bridgelabz.hotelreservation;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Date;
 
 public class HotelReservation
 {
     ArrayList<Hotel> hotelList=new ArrayList<Hotel>();
 
-    public static void main(String args[])
+    public boolean addHotel(String hotelName,int rates, int rating)
     {
-        HotelReservation hotelReservation=new HotelReservation();
-
-        System.out.println("***** Welcome to hotel reservation system *****");
-        hotelReservation.addHotel();
+        Hotel hotel=new Hotel(hotelName,rates,rating);
+        hotelList.add(hotel);
+        System.out.println(hotelList.isEmpty());
+        if(hotelList.isEmpty())
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
-    public void addHotel()
+    public boolean findCheapestHotel(String date11,String date22)
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the Name of the Hotel");
-        String hotelName=scanner.nextLine();
-
-        System.out.println("Enter the rate for Regular customer");
-        int rates=Integer.parseInt(scanner.nextLine());
-
-        Hotel hotel=new Hotel(hotelName,rates);
-        hotelList.add(hotel);
+        Date date1=new SimpleDateFormat("dd/mm/yyyy").parse(date11);
     }
 }
