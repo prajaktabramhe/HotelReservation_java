@@ -1,8 +1,14 @@
 package com.bridgelabz.hotelreservation;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
+
 
 public class HotelReservation
 {
@@ -23,8 +29,5 @@ public class HotelReservation
         }
     }
 
-    public boolean findCheapestHotel(String date11,String date22)
-    {
-        Date date1=new SimpleDateFormat("dd/mm/yyyy").parse(date11);
-    }
+
 }

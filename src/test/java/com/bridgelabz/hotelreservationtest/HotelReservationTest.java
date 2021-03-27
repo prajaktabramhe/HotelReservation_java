@@ -12,12 +12,6 @@ HotelReservation hotelReservation = new HotelReservation();
         boolean result = hotelReservation.addHotel("Lakewood",110,4);
         Assertions.assertTrue(result);
     }
-    @Test
-    public void checkedCheapestHotelBetweenTwoDates()
-    {
-        boolean result = hotelReservation.findCheapestHotel("10sep2020","11sep2020");
-        Assertions.assertTrue(result);
-    }
 
 
 }
