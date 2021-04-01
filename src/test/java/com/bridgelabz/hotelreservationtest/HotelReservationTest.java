@@ -20,4 +20,10 @@ HotelReservation hotelReservation = new HotelReservation();
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void HotelName_weekDay_WeekendRatesIfAdded_ShouldReturntrue()
+    {
+        boolean result = hotelReservation.addHotelWeekendWeekDay("Lakewood","$110","$90");
+        Assertions.assertTrue(result);
+    }
 }

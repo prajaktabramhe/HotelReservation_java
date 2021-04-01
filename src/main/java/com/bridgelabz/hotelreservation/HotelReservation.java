@@ -13,12 +13,12 @@ import java.util.Date;
 public class HotelReservation
 {
     ArrayList<Hotel> hotelList=new ArrayList<Hotel>();
+    ArrayList<Hotel> hotelList1=new ArrayList<Hotel>();
 
     public boolean addHotel(String hotelName,int rates, int rating)
     {
         Hotel hotel=new Hotel(hotelName,rates,rating);
         hotelList.add(hotel);
-        System.out.println(hotelList.isEmpty());
         if(hotelList.isEmpty())
         {
             return false;
@@ -64,4 +64,18 @@ public class HotelReservation
         }
     }
 
+    public boolean addHotelWeekendWeekDay(String hotelName,String weekday, String weekend)
+    {
+        Hotel hotel=new Hotel(hotelName,weekday,weekend);
+        hotelList1.add(hotel);
+
+        if(hotelList1.isEmpty())
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }
