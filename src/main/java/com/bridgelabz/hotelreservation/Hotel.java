@@ -5,6 +5,7 @@ public class Hotel
     String hotelName;
     double rates;
     int rating;
+    private Double weekendRates;
 
     public Hotel(String hotelName,double rates,int rating)
     {
@@ -20,6 +21,13 @@ public class Hotel
         this.rates=rates;
     }
 
+    public Hotel(String hotelName, double rates, Double weekendRates)
+    {
+        this.hotelName=hotelName;
+        this.rates=rates;
+        this.weekendRates = weekendRates;
+    }
+
     public double getRate()
     {
         return rates;
@@ -28,6 +36,9 @@ public class Hotel
     public String getName()
     {
         return hotelName;
+    }
+    public Double getWeekendRates() {
+        return weekendRates;
     }
 
     @Override
